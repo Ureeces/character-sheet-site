@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Black Chancery';
+  src: url(../../assets/fonts/BLKCHCRY.TTF);
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#title {
+  font-size: 4em;
+  font-family: 'Black Chancery';
+}
+
+#discussion {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}

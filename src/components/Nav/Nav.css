@@ -1,0 +1,26 @@
+#nav-main {
+    background-color:  brown;
+    background-image: linear-gradient(to bottom right, maroon, brown);
+    height: 10%;
+    padding: 0px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.navbar a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: yellow;
+}
+
+.navbar a:hover {
+    color: gray;
+}
+
+.nav-item {
+    padding: 10px ;
+}
