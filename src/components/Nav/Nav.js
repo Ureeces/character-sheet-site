@@ -16,6 +16,10 @@ export default class Nav extends Component {
                     <li className="nav-item">
                         <NavLink to="/register">Register</NavLink>
                     </li>
+
+                    <li className="nav-item">
+                        <NavLink to="/sheet">Sheet Template</NavLink>
+                    </li>
                 </ul>
             </div>
         )

@@ -11,7 +11,7 @@ export default class Home extends Component {
             <div>
             <Nav />
             <div id="main">
-                <h1 id="title">The Ultimate Character Creator</h1>
+                <h1 id="title">Ultimate Character Creator</h1>
                 <p>Welcome to the (self-proclaimed) greatest character sheet manager ever created!</p>
                 <p>Create and save your character sheets from multiple games, all within one site!</p>
                 

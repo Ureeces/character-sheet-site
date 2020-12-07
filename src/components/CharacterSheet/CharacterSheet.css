@@ -1,10 +1,44 @@
+@font-face {
+    font-family: 'Priori-sans-alt';
+    src: url(../../assets/fonts/PrioriSerRegularSC.ttf);
+}
+
+#sheet-container {
+    font-family: 'Priori-sans-alt';
+    height: 100vh;
+    background-color: white;
+    margin: 10px;
+}
+
+.logo {
+    width: 30%;
+}
+
+#line-inputs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#line-inputs-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logo {
+    width: 40%;
+    height: 20%;
+    align-self: flex-start;
+}
+
 .line-input {
     background: transparent;
     border: none;
     border-bottom: 1px solid black;
     display: inline-block;
     position: relative;
-    width: 20em;
+    width: 10em;
     top: -3em;
 }
 
@@ -13,4 +47,29 @@
     width: 6em;
     margin-right: .5em;
     padding-top: 1.5em;
+    padding-left: 5px;
+}
+
+#text-inputs-container{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.text-input-item {
+    display: flex;
+    justify-content: baseline;
+}
+
+#submit-character {
+    border: none;
+    font-size: 24pt;
+    text-decoration: none;
+    color: #2e1e0a;
+    background-color: transparent;
+}
+
+#submit-character:hover {
+    text-decoration: underline;
 }

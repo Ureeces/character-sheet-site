@@ -1,47 +1,65 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+// import { FormControl } from "@material-ui/core";
+
 // import PropTypes from 'prop-types';
 
-import './CharacterSheet.css';
+import pathfinder_logo from "../../assets/images/pathfinder_logo.png";
+
+import LineInput from "./shared/LineInput";
+import TextInput from "./shared/TextInput";
+import "./CharacterSheet.css";
 
 const CharacterSheetView = (props) => {
-
-    const handleInputOnChange = (event) => {
-        props.handleInputOnChange(event);
-    };
-
-    return (
+  return (
+    <div>
+      <div id="sheet-container">
+        {/* <form> */}
+        {/* Start line input container */}
         <div>
-            <div>
-                <form>
-
-                <img src=".././assets/images/pathfinder_logo.png" alt="logo_here" />
-                
-                <label for="name" className="line-label">Name
-                <input 
-                    className="line-input"
-                    type="text" 
-                    name="name"
-                    onChange={(event) => handleInputOnChange(event)}
-                    value={props.name}
-                    />
-                </label> 
-                {" "}
-
-                <label for="level" className="line-label">Alignment
-                <input 
-                    className="line-input"
-                    type="text" 
-                    name="level"
-                    onChange={(event) => handleInputOnChange(event)}
-                    value={props.level}
-                    />
-                </label>
-
-                <input type="text" />
-                </form>
-            </div>
+          <img
+            src={pathfinder_logo}
+            alt="logo_here"
+            className="logo"
+            id="logo"
+          />
+          <ul id="line-inputs-list">
+            {Object.keys(props.charInfo).map((attr) => {
+              return (
+                <li>
+                  <LineInput
+                    label={attr[0].toUpperCase() + attr.slice(1)}
+                    name={attr}
+                    onChange={props.handleOnChange}
+                    value={props.charInfo[attr]}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+          {/* End line input container */}
+          {/* Start input container */}
+          <ul id="text-inputs-container">
+            {Object.keys(props.abilityScores).map((attr) => {
+              return (
+                <li>
+                  <TextInput label={attr.toUpperCase()} name={attr} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>{" "}
+        <div style={{ textAlign: "center" }}>
+          <button id="submit-character" onClick={props.handleOnSubmit}>
+            Submit my character sheet
+          </button>
         </div>
-    )
-}
+        {/* </form> */}
+      </div>
+
+      <Link to="/">Go Home</Link>
+    </div>
+  );
+};
 
 export default CharacterSheetView;
